@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     /***************************************************
     * Start Your Code Here For MVP - Part 1
     ***************************************************/
-
+    var myFavoriteMovies = ["Happy Gilmore","Gaurdians of the Galaxy","Water Boy","The Hobbit"]
     
 
     /***************************************************
@@ -32,8 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         * Start Your Code Here For MVP - Part 2
         ***************************************************/
 
-        
-        
+        var numberOfMovies = myFavoriteMovies.count
         
 
         /***************************************************
@@ -49,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         /***************************************************
         * Start Your Code Here For MVP - Part 3
         ***************************************************/
-
+        var currentStudent = myFavoriteMovies[index]
         
         
         
@@ -67,6 +66,9 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         /***************************************************
         * Start Your Code Here For Stretch #1
         ***************************************************/
+        
+        myFavoriteMovies.append("The Founder")
+        myFavoriteMovies.insert("The Ring", at: 1)
 
         /***************************************************
         * End Your Code Here For Stretch #1
@@ -78,13 +80,16 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         /***************************************************
         * Start Your Code Here For Stretch #2
         ***************************************************/
+        myFavoriteMovies.remove(at: 0)
+        myFavoriteMovies.remove(at: 1)
+        let myAllTimeFavorite = myFavoriteMovies[2]
 
         /***************************************************
         * End Your Code Here For Stretch #2
         ***************************************************/
         myTableView.reloadData()
         //Uncomment the line below for Stretch #2
-        //stretch2Label.text = myAllTimeFavorite
+        stretch2Label.text = myAllTimeFavorite
     }
 }
 
